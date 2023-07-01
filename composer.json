@@ -1,0 +1,22 @@
+{
+    "name": "zose43/a3f-test-task",
+    "description": "Test task",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php",
+            "src/App/parse.php"
+        ],
+        "psr-4": {
+            "App\\": "src/App/"
+        }
+    }
+}

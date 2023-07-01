@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  php-fpm:
+    container_name: "a3f-task-php-fpm"
+    build:
+      context: .
+      dockerfile: 'docker/php-fpm/Dockerfile'
+    volumes:
+      - ./:/app
+    environment:
+        DATA_OUTPUT: '/app/output'
+
+  php-cli:
+    container_name: "a3f-task-php-cli"
+    build:
+      context: .
+      dockerfile: 'docker/php-cli/Dockerfile'
+    volumes:
+      - ./:/app
